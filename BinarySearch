@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int binarySearch( int arr[] , int size , int key ){
+    
+    int s = 0 ;
+    int e = size - 1;
+    int mid = s + (e-s)/2 ;
+    
+    while ( s<=e) {
+        
+        if( arr[mid] == key ){
+            return mid ;
+        }
+        if( arr[mid] < key ){
+            s = mid + 1 ;
+        }
+        else {                 //when arr[mid] > key //
+            e = mid - 1 ;
+        }
+        
+        mid = s + (e-s)/2 ;        
+    }
+    
+    
+    return -1 ;
+    
+    
+    
+}
+
+
+
+
+int main()
+    {
+      
+      int arr[] = { 1 , 2, 3, 5 ,6 };
+     cout << binarySearch( arr , 5 , 6 ) << endl;  
+        
+    }
+        
+            
+     // for binary search u have to check the middle one if the key is greater than the mid one 
+     //u shift the stating point to middle+1 and then do the middle comparison again but if it is 
+     //shorter than that of middle one u shift the end to middle-1 and do the whole search again
+     //u can only do this if the array is sorted 

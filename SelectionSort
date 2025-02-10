@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int InsertionSort( int arr[] , int n ){
+    
+    for( int i = 0 ; i < n-1 ; i++ ){
+        int MinIndex = i ;
+        
+        for( int j =0 ; j < i+1 ; j++){
+            
+            if ( arr[j] < arr[MinIndex] ){
+                MinIndex = j ;
+            }
+            
+            
+        }
+        swap(arr[MinIndex]  , arr[i] );
+    }
+
+
+}
+
+// in here we take the first element of the array and then swap it with the minimum value in the array 
+// and then move onto the next element and do the same for them and the array is sorted 

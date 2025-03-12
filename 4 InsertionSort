@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int InsertionSort( int arr[] , int n ){
+    
+    for( int i = 1 ; i < n ; i++ ){
+         int temp = arr[i] ;
+         int j = i-1 ;
+        for(   ; j >=0 ; j--){
+            
+            if ( arr[j] > arr[temp] ){
+                arr[j+1] = arr[j] ;   // shifting of the number as it is small
+            }
+            
+            else{
+                break;
+            }
+        }
+        arr[j+1] = temp ;
+    
+    }
+
+}
+// in this u take the elemnts and see if the ledt one is greater than this 
+// if yes than u shift the greater elemnt and check again until false then u 
+// put the number on observation there 

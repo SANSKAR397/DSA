@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int bubbleSort( int arr[] , int n ){
+    
+    for( int i = 1 ; i < n ; i++ ){
+       
+        for( int j =0 ; j < n - i ; j++){
+            
+            if ( arr[j] > arr[j+1] ){
+                swap ( arr[j] , arr[j+1]) ;
+            }
+            
+            
+        }
+    
+    }
+
+}
+//  if the first number is bigger than the next one u swap so that make the last one the highest in the first itration 
+// so u use n-i for reducing the complexity as after first round u dont need to check last and after second round u dont need to check the 
+// last two numbers of an array 

@@ -9,7 +9,7 @@ int InsertionSort( int arr[] , int n ){
          int j = i-1 ;
         for(   ; j >=0 ; j--){
             
-            if ( arr[j] > arr[temp] ){
+            if ( arr[j] > temp ){
                 arr[j+1] = arr[j] ;   // shifting of the number as it is small
             }
             

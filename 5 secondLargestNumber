@@ -1,0 +1,19 @@
+public:
+    // Function returns the second
+    // largest elementz
+    int getSecondLargest(vector<int> &arr) {
+        int n = arr.size();
+        int max = 0;
+        int sec = -1;
+        int temp;
+        for(int i = 0 ; i < n ; i++){
+            if(arr[i] > max){
+                temp = max;
+                max = arr[i];
+                sec = temp;
+            } else if (arr[i] > sec && arr[i] < max) {
+                sec = arr[i];
+            }
+        }
+        return sec == 0 ? -1 : sec;
+    }
